@@ -25,7 +25,7 @@ const user = {
   id: 1,
   name: "yourName",
   age: 20,
-  };
+};
 
 // No.8
 console.log (string);
@@ -45,12 +45,14 @@ console.log(names);
 // No.3
 const showValue = (value) => {
   console.log(value);
-  };
+};
 
 showValue("hoge");
 
 // No.4
-const add = (a, b) => a + b;
+const add = (a, b) =>{
+  return a + b;
+};
 console.log (add(1,2));
 
 // No.5
