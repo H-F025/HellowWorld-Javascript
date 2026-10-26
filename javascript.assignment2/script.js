@@ -45,8 +45,10 @@ const moneysA = 8000;
 const moneysB = 12000;
 const moneysC = 3000;
 
-if (moneysB > moneysA && moneysB > moneysC) {
-  console.log("B君の所持金が一番多いです");
+if (moneysB > moneysA) {
+  if (moneysA > moneysC) {
+    console.log ("B君の所持金が一番多いです")
+  }
 }
 
 /*アラート、switch文
@@ -63,14 +65,14 @@ const score = Math.floor(Math.random() * 100) + 1;
 // テンプレートリテラルで、scoreの値と"点"をつなげる。←テンプレートリテラルを使うことでコードを読みやすくする。
 scoreText.textContent = `${score}点`;
 // if文で、それぞれの条件に当てはまった場合の指示を実装。
-if (score === 100) {
-  alert("満点！！");
+  if (score === 100) {
+      alert("満点！！");
   } else if (score >= 80) {
-  alert("合格です");
+      alert("合格です");
   } else if (score >= 30) {
-  alert("赤点です");
+      alert("赤点です");
   } else {
-    alert("不合格です");
+      alert("不合格です");
   }
 });
 
@@ -141,18 +143,18 @@ for (let i = 0; i < nums.length; i++) {
 console.log(totals);
 
 // No.4
-const A = [1, "hoge", 2, "huga", 3, "piyo"];
+const element = [1, "hoge", 2, "huga", 3, "piyo"];
 // 結果を入れるための空の配列(numArray,strings)を用意
 const numArray = [];
 const strings = [];
 // let i = 0 でカウンター i を 0 から始める : 初期化(最初に1回だけ実行)
 // A.length を使うことで後から要素が増えても自動で全て表示(ループ回数を直接指定しない(例: i < 3)
-for (let i = 0; i < A.length; i++) {
+for (let i = 0; i < element.length; i++) {
 // typeof で各要素の型を調べ、"number" なら numArray に、"string" なら strings に push で追加
-  if (typeof A[i] === "number") {
-    numArray.push(A[i]);
-  } else if (typeof A[i] === "string") {
-    strings.push(A[i]);
+  if (typeof element[i] === "number") {
+    numArray.push(element[i]);
+  } else if (typeof element[i] === "string") {
+    strings.push(element[i]);
   }
 }
 
