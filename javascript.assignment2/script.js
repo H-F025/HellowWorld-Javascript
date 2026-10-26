@@ -61,10 +61,10 @@ const scoreText = document.getElementById("score");
 scoreBtn.addEventListener("click", () => {
   // ランダムな整数(floor)。
   // + 1 にすることで1〜100の整数の範囲からランダムになるようにする。
-const score = Math.floor(Math.random() * 100) + 1;
-// テンプレートリテラルで、scoreの値と"点"をつなげる。←テンプレートリテラルを使うことでコードを読みやすくする。
-scoreText.textContent = `${score}点`;
-// if文で、それぞれの条件に当てはまった場合の指示を実装。
+  const score = Math.floor(Math.random() * 100) + 1;
+  // テンプレートリテラルで、scoreの値と"点"をつなげる。←テンプレートリテラルを使うことでコードを読みやすくする。
+  scoreText.textContent = `${score}点`;
+  // if文で、それぞれの条件に当てはまった場合の指示を実装。
   if (score === 100) {
       alert("満点！！");
   } else if (score >= 80) {
@@ -77,27 +77,26 @@ scoreText.textContent = `${score}点`;
 });
 
 // No.2
-
 // 要素の取得。getElementByIdでHTMLで定義した変数(id)"prefInput"を取得し、jsから入力値を読み取れるようにする。
 const prefInput = document.getElementById("prefInput");
 // addEventListenerのchangeイベントを設定。テキスト欄に文字を入力し、Enterを押した際に発生。
 // valueで今入力されている文字を取得。
 prefInput.addEventListener("change", () => {
-const value = prefInput.value;
-// switch文を使い、それぞれの条件と判定をさせる。
-// caseに当てはまる文字が入力されたときだけ、意図した判定がコンソールに表示される。
-switch (value) {
-  case "saitama":
-    console.log("埼玉");
-      break;
-  case "tokyo":
-    console.log("東京");
-      break;
-  case "kanagawa":
-    console.log("神奈川");
-      break;
-  default:
-    console.log("未確認");
+  const value = prefInput.value;
+  // switch文を使い、それぞれの条件と判定をさせる。
+  // caseに当てはまる文字が入力されたときだけ、意図した判定がコンソールに表示される。
+  switch (value) {
+    case "saitama":
+      console.log("埼玉");
+        break;
+    case "tokyo":
+      console.log("東京");
+        break;
+    case "kanagawa":
+      console.log("神奈川");
+        break;
+    default:
+      console.log("未確認");
   }
 });
 
@@ -150,7 +149,7 @@ const strings = [];
 // let i = 0 でカウンター i を 0 から始める : 初期化(最初に1回だけ実行)
 // A.length を使うことで後から要素が増えても自動で全て表示(ループ回数を直接指定しない(例: i < 3)
 for (let i = 0; i < element.length; i++) {
-// typeof で各要素の型を調べ、"number" なら numArray に、"string" なら strings に push で追加
+  // typeof で各要素の型を調べ、"number" なら numArray に、"string" なら strings に push で追加
   if (typeof element[i] === "number") {
     numArray.push(element[i]);
   } else if (typeof element[i] === "string") {
@@ -169,7 +168,7 @@ for (let i = 1; i <= 100; i++) {
   if (i % 2 === 0) {
     continue; // 「今回のループの残りを飛ばして、次の回へ進む」という命令
   }
-// 奇数のときだけ continue を通らないので、total に足される
+  // 奇数のときだけ continue を通らないので、total に足される
   totalArray += i;
 }
 
